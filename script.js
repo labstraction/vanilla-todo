@@ -35,8 +35,34 @@ function displayTodos(todos){
 
 }
 
+let todos = []
 
-getAllTodos().then(results => displayTodos(results))
+getAllTodos().then(results => {
+    todos = results;
+    displayTodos(todos)
+})
+
+
+function orderByTitle() {
+    todos.sort((t1, t2) => t1.title.localeCompare(t2.title));
+    displayTodos(todos);
+}
+
+function compareDates(t1, t2) {
+    const date1 = t1.creationDate;
+    const date2 = t2.creationDate;
+    const dateObj1 = new Date(date1);
+    const dateObj2 = new Date(date2);
+    const time1 = dateObj1.getTime();
+    const time2 = dateObj2.getTime();
+    return time2 - time1; 
+}
+
+function orderByCreationDate(){
+    todos.sort(compareDates);
+    displayTodos(todos);
+}
+
 
 // due tasti nella home (lista di todo)
 // 1) mette in ordine alfabetico

@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
 }
 
 html, body{
@@ -62,4 +62,10 @@ body{
 .detail-link:hover{
     background-color: black;
     color: white;
+}
+
+.sort-btn{
+    padding: 8px;
+    border-radius: 30px;
+    background-color: white;
 }

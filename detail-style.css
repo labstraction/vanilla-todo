@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
 }
 
 html, body{
@@ -44,4 +44,20 @@ header{
 .back-link:hover{
     background-color: black;
     color: white;
+}
+
+.detail-info{
+    font-size: x-large;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.colored-dot{
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
 }
