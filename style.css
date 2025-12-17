@@ -70,3 +70,15 @@ body{
     border-radius: 30px;
     background-color: white;
 }
+
+.colored-dot{
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+}
+
+.color-and-title{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

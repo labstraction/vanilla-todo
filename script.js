@@ -8,11 +8,22 @@ function displayTodos(todos){
         const card = document.createElement('div');
         card.classList.add('todo-card');
 
+        const colorAndTitleDiv = document.createElement('div');
+        colorAndTitleDiv.classList.add('color-and-title');
+
+        const colorDot = document.createElement('div');
+        colorDot.classList.add('colored-dot');
+        colorDot.style.backgroundColor = todo.color;
+
+        colorAndTitleDiv.appendChild(colorDot);
+
         const titleSpan = document.createElement('span');
         titleSpan.appendChild(document.createTextNode(todo.title));
-        // titleSpan.style.textDecoration = 'line-through'
+        titleSpan.style.textDecoration = todo.done ? 'line-through' : 'none';
 
-        card.appendChild(titleSpan);
+        colorAndTitleDiv.appendChild(titleSpan);
+
+        card.appendChild(colorAndTitleDiv);
 
         // const detailBtn = document.createElement('button');
         // detailBtn.appendChild(document.createTextNode("🠊"));
