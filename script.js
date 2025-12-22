@@ -34,14 +34,31 @@ function displayTodos(todos){
 
         // card.appendChild(detailBtn);
 
+        const actionsDiv = document.createElement('div');
+        let completeActionIcon;
+        if (todo.done) {
+            completeActionIcon = "↺"
+        } else {
+            completeActionIcon = "✓"
+        }
         const completeBtn = document.createElement('button');
+        completeBtn.appendChild(document.createTextNode(completeActionIcon));
+        completeBtn.classList.add("action");
+
+        completeBtn.addEventListener('click', () => {
+            
+        })
+
+        actionsDiv.appendChild(completeBtn);
 
         const detailLink = document.createElement('a');
         detailLink.appendChild(document.createTextNode("🠊"));
-        detailLink.classList.add("detail-link");
+        detailLink.classList.add("action");
         detailLink.href = './detail.html?todoId=' + todo.id;
 
-        card.appendChild(detailLink);
+        actionsDiv.appendChild(detailLink);
+
+        card.appendChild(actionsDiv);
 
         todosContainer.appendChild(card);
 

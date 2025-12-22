@@ -46,7 +46,7 @@ body{
     color: white;
 } */
 
-.detail-link{
+.action{
     background-color: white;
     border: 1px solid black;
     border-radius: 50%;
@@ -60,7 +60,7 @@ body{
     display: inline-block;
 }
 
-.detail-link:hover{
+.action:hover{
     background-color: black;
     color: white;
 }
